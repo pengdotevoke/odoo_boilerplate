@@ -1,0 +1,88 @@
+## Common Group Samples:
+
+### Base User (Internal User)
+```xml
+base.group_user
+```
+- Standard internal user group.
+
+### Administrator (Settings Access)
+```xml
+base.group_system
+```
+- Full administrative privileges.
+
+### Portal User (External Users)
+```xml
+base.group_portal
+```
+- Limited access, typically for external users.
+
+### Public User (Guest Users)
+```xml
+base.group_public
+```
+- Users who are not logged in.
+
+## Module-Specific Groups:
+
+### Sales (CRM)
+- **Sales Manager**  
+  ```xml
+  sales_team.group_sale_manager
+  ```
+- **Sales User (See Own Documents Only)**  
+  ```xml
+  sales_team.group_sale_user
+  ```
+
+### Purchase
+- **Purchase Manager**  
+  ```xml
+  purchase.group_purchase_manager
+  ```
+- **Purchase User**  
+  ```xml
+  purchase.group_purchase_user
+  ```
+
+### Accounting
+- **Accounting Manager**  
+  ```xml
+  account.group_account_manager
+  ```
+- **Billing User**  
+  ```xml
+  account.group_account_user
+  ```
+
+### Inventory
+- **Warehouse Manager**  
+  ```xml
+  stock.group_stock_manager
+  ```
+- **Warehouse User**  
+  ```xml
+  stock.group_stock_user
+  ```
+
+## Custom Groups
+If you have created a custom user group, you can reference it using the module name and XML ID, e.g.:
+```xml
+<record id="group_custom_manager" model="res.groups">
+    <field name="name">Custom Manager</field>
+</record>
+
+<record id="access_my_model_manager" model="ir.model.access">
+    <field name="name">Manager Access</field>
+    <field name="model_id" ref="model_my_model"/>
+    <field name="group_id" ref="module_name.group_custom_manager"/>
+    <field name="perm_read" eval="True"/>
+    <field name="perm_write" eval="True"/>
+    <field name="perm_create" eval="True"/>
+    <field name="perm_unlink" eval="True"/>
+</record>
+```
+
+Let me know if you need access rules for a specific module or a custom scenario!
+

@@ -1,16 +1,17 @@
-<? xml version='1.0' encoding='utf-8'/>
 <odoo>
+    <!-- Root Menu -->
     <menuitem id="menu_hospital_root"
-    name="Hospital Management System"
-    sequence='10'
-    />
+        name="Hospital Management System"
+        sequence="10"/>
 
+    <!-- Front Desk Submenu -->
     <menuitem id="menu_front_desk"
-    name="Front Desk"
-    parent="menu_hospital_root"/>
+        name="Front Desk"
+        parent="menu_hospital_root"/>
 
+    <!-- Patients Menu Under Front Desk -->
     <menuitem id="menu_hospital_patient"
-    name="Patients"
-    parent="menu_hospital_root"
-    action="action_hospital_patient"/>
+        name="Patients"
+        parent="menu_front_desk"
+        action="action_hospital_patient"/>
 </odoo>
