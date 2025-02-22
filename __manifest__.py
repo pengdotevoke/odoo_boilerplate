@@ -5,10 +5,10 @@
     'summary': 'CCustom module that creates basic templates for odoo app development',
     'author': 'James Oginga',
     'depends': ['base'],  
-    'data': [
-        'security/ir.model.access.csv',
-        'views/bank_reconciliation_views.xml',
-    ],
+    'views': [
+        'views/hospital_patient_view.xml'
+        'views/menu.xml'
+        ],
     'installable': True,
     'application': True,
 }
