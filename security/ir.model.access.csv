@@ -1,4 +1,5 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_hospital_patient,Hospital Patient Access,odoo_boilerplate.model_hospital_patient,base.group_user,1,1,1,1
-access_patient_appointment,Patient Appointment Access,odoo_boilerplate.model_patient_appointment,base.group_user,1,1,1,1
+access_hospital_patient,Hospital Patient Access,hope_hospital.model_hospital_patient,base.group_user,1,1,1,1
+access_patient_appointment,Patient Appointment Access,hope_hospital.model_patient_appointment,base.group_user,1,1,1,1
+access_hospital_staff,Hospital Staff Access,hope_hospital.model_hospital_staff,base.group_user,1,1,1,1
 

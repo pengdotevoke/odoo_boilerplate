@@ -14,6 +14,13 @@
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button name="action_confirm" class="oe_highlight" type="object" string="Confirm" invisible="state != 'draft'"/>
+                    <button name="action_ongoing" class="oe_highlight" type="object" string="Ongoing" invisible="state != 'confirm'"/>
+                    <button name="action_complete" class="oe_highlight" type="object" string="Complete" invisible="state != 'ongoing'"/>
+                    <button name="action_cancel" class="btn_danger" type="object" string="Cancel"/>
+                    <field name="state" widget="statusbar" clickable="1" statusbar_visible="draft, confirm, ongoing, complete"/>
+                </header>
                 <sheet>
                     <group>
                         <group>

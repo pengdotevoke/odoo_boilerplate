@@ -1,17 +1,16 @@
 <odoo>
-<!--Basic Form Tree Definition-->
-    <record id="action_hospital_patient" model="ir.actions.act_window">
-        <field name="name">Patient Registry</field>
-        <field name="res_model">hospital.patient</field>
+     <record id="action_hospital_staff" model="ir.actions.act_window">
+        <field name="name">Hospital Staff</field>
+        <field name="res_model">hospital.staff</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">
-            <p class="o_view_nocontent_smiling_face">Create a new patient record</p>
+            <p class="o_view_nocontent_smiling_face">Add new Staff to the hospital</p>
         </field>
     </record>
     <!--Basic Form View-->
-    <record id="view_hospital_patient_form" model="ir.ui.view">
-        <field name="name">Patient Form</field>
-        <field name="model">hospital.patient</field>
+    <record id="view_hospital_staff_form" model="ir.ui.view">
+        <field name="name">Staff Form</field>
+        <field name="model">hospital.staff</field>
         <field name="type">form</field>
         <field name="arch" type="xml">
             <form>
@@ -23,7 +22,7 @@
                         </group>
                         <group>
                             <field name="gender" string="Gender"/>
-                            <field name="address" string="Address"/>
+                            <field name="role" string="Role"/>
                         </group>
                     </group>
                 </sheet>
@@ -37,18 +36,17 @@
         </field>
     </record>
     <!--Basic Tree View-->
-    <record id="view_hospital_patient_tree" model="ir.ui.view">
-        <field name="name">Patient Registry</field>
-        <field name="model">hospital.patient</field>
+    <record id="view_hospital_staff_tree" model="ir.ui.view">
+        <field name="name">Staff Form</field>
+        <field name="model">hospital.staff</field>
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
                 <field name="dob"/>
                 <field name="gender"/>
-                <field name="address"/>
+                <field name="role"/>
             </tree>
         </field>    
     </record>
-
 </odoo>
