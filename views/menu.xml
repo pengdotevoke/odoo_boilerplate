@@ -8,7 +8,14 @@
     <menuitem id="menu_front_desk"
         name="Front Desk"
         parent="menu_hospital_root"/>
-
+    <!-- Appointments Menu  -->
+    <menuitem id="menu_front_desk"
+        name="Front Desk"
+        parent="menu_hospital_root"/>
+    <menuitem id="menu_patient_appointment"
+        name="Appointments"
+        parent="menu_front_desk"
+        action="action_patient_appointment"/>
     <!-- Patients Menu Under Front Desk -->
     <menuitem id="menu_hospital_patient"
         name="Patients"

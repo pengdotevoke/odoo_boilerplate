@@ -4,7 +4,7 @@
     'category': 'Accounting',
     'summary': 'Custom module that creates basic templates for odoo app development',
     'author': 'James Oginga',
-    'depends': ['base'],  
+    'depends': ['base', 'mail'],  
     'data': [
     'security/ir.model.access.csv', 
     'views/hospital_patient_view.xml',   

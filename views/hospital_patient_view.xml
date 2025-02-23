@@ -1,4 +1,5 @@
 <odoo>
+<!--Basic Form Tree Definition-->
     <record id="action_hospital_patient" model="ir.actions.act_window">
         <field name="name">Patients</field>
         <field name="res_model">hospital.patient</field>
@@ -7,4 +8,49 @@
             <p class="o_view_nocontent_smiling_face">Create a new patient record</p>
         </field>
     </record>
+    <!--Basic Form View-->
+    <record id="view_hospital_patient_form" model="ir.ui.view">
+        <field name="name">Patient Form</field>
+        <field name="model">hospital.patient</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" string="Name" required="1"/>
+                            <field name="dob" string="Date of Birth"/>
+                        </group>
+                        <group>
+                            <field name="age" string="Age"/>
+                            <field name="gender" string="Gender"/>
+                            <field name="address" string="Address"/>
+                        </group>
+                    </group>
+                </sheet>
+                <!--Add chatter-->
+                <div class="oe_chatter">
+                    <field name="message_follower_ids"/>
+                    <field name="activity_ids"/>
+                    <field name="message_ids"/>
+                </div>
+            </form>
+        </field>
+    </record>
+    <!--Basic Tree View-->
+    <record id="view_hospital_patient_tree" model="ir.ui.view">
+        <field name="name">Patient Tree</field>
+        <field name="model">hospital.patient</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="dob"/>
+                <field name="age"/>
+                <field name="gender"/>
+                <field name="address"/>
+            </tree>
+        </field>    
+    </record>
+
 </odoo>
