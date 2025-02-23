@@ -6,9 +6,10 @@
     'author': 'James Oginga',
     'depends': ['base', 'mail'],  
     'data': [
-    'security/ir.model.access.csv', 
-    'views/hospital_patient_view.xml',   
-    'views/menu.xml',
+        'security/ir.model.access.csv', 
+        'views/hospital_patient_view.xml',   
+        'views/patient_appointment_view.xml', 
+        'views/menu.xml',
     ],
     'installable': True,
     'application': True,

@@ -1,24 +1,23 @@
 <odoo>
     <!-- Root Menu -->
     <menuitem id="menu_hospital_root"
-        name="Hospital Management System"
-        sequence="10"/>
+        name="Hope Hospital"
+        sequence="10"
+        web_icon="odoo_boilerplate,static/description/icon.png"/>
 
     <!-- Front Desk Submenu -->
     <menuitem id="menu_front_desk"
         name="Front Desk"
         parent="menu_hospital_root"/>
-    <!-- Appointments Menu  -->
-    <menuitem id="menu_front_desk"
-        name="Front Desk"
-        parent="menu_hospital_root"/>
-    <menuitem id="menu_patient_appointment"
-        name="Appointments"
-        parent="menu_front_desk"
-        action="action_patient_appointment"/>
+    
     <!-- Patients Menu Under Front Desk -->
     <menuitem id="menu_hospital_patient"
-        name="Patients"
+        name="Patient Registry"
         parent="menu_front_desk"
         action="action_hospital_patient"/>
+
+    <menuitem id="menu_patient_appointment"
+        name="Patient Appointments"
+        parent="menu_front_desk"
+        action="action_patient_appointment"/>
 </odoo>

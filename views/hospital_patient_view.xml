@@ -22,7 +22,6 @@
                             <field name="dob" string="Date of Birth"/>
                         </group>
                         <group>
-                            <field name="age" string="Age"/>
                             <field name="gender" string="Gender"/>
                             <field name="address" string="Address"/>
                         </group>
@@ -46,7 +45,6 @@
             <tree>
                 <field name="name"/>
                 <field name="dob"/>
-                <field name="age"/>
                 <field name="gender"/>
                 <field name="address"/>
             </tree>

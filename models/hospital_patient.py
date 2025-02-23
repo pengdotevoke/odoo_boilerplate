@@ -7,7 +7,6 @@ class HospitalPatient(models.Model):
 
     #Add fields here for patient details, such as name, age, gender, and date of birth.
     name = fields.Char('Name', required=True, tracking=True)
-    age = fields.Integer('Age', tracking=True)
     gender = fields.Selection([
         ('male', 'Male'),
         ('female', 'Female'),
